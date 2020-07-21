@@ -9,15 +9,11 @@
 
 ![screenshot1](./src/assets/screenshot01.png)
 
-![screenshot1](./src/assets/screenshot02.png)
-
-![screenshot1](./src/assets/screenshot03.png)
-
 > We created the project boilerplate using the react-create-app CLI.
 
 ## Live Version
 
-[React Calculator](https://react-calculator-116.herokuapp.com/)
+[Redux Library](https://redux-library.herokuapp.com/)
 
 ## Built With
 

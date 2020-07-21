@@ -14,8 +14,12 @@ function BooksForm() {
     <div className="booksform">
       <input type="text" placeholder="Book Title" />
       <select name="categories">
-        {categories.map((category) => {
-          return <option value={category}>{category}</option>;
+        {categories.map((category, index) => {
+          return (
+            <option value={category} key={index}>
+              {category}
+            </option>
+          );
         })}
       </select>
     </div>

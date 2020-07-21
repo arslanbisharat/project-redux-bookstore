@@ -5,11 +5,13 @@ import Book from './Book';
 
 const BooksList = ({ books }) => (
   <div className="bookslist">
-    <tr>
-      {books.map((book) => {
-        return <Book book={book} />;
-      })}
-    </tr>
+    <table>
+      <tbody>
+        {books.map((book) => {
+          return <Book book={book} key={book.id} />;
+        })}
+      </tbody>
+    </table>
   </div>
 );
 

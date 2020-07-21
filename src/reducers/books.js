@@ -1,7 +1,10 @@
-const bookreducer = (state, action) => {
+const bookReducer = (state, action) => {
   switch (action.type) {
     case 'CREATE_BOOk':
-      return { id: action.id, title: action.title, category: action.category };
+      return [
+        ...state,
+        { id: action.id, title: action.title, category: action.category },
+      ];
 
     case 'REMOVE_BOOK':
       return null;
@@ -11,4 +14,4 @@ const bookreducer = (state, action) => {
   }
 };
 
-export default bookreducer;
+export default bookReducer;

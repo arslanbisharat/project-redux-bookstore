@@ -14,13 +14,11 @@ function BooksForm() {
     <div className="booksform">
       <input type="text" placeholder="Book Title" />
       <select name="categories">
-        {categories.map((category, index) => {
-          return (
-            <option value={category} key={index}>
-              {category}
-            </option>
-          );
-        })}
+        {categories.map(category => (
+          <option value={category} key={Math.floor(Math.random() * 100000)}>
+            {category}
+          </option>
+        ))}
       </select>
     </div>
   );

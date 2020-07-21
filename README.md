@@ -1,15 +1,17 @@
-# Redux Library Milestone 1
+# Redux Library Milestone 2
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-> For this last milestone, we built the basic structure of the project and added the necessary dependencies.
+> For this milestone, we built the necessary files to create the app. We divided them into the appropriate folders and managed to create the state for the components. We worked with the connect method from Redux as well as the createStore to set an initial state for the app and set everything else in place for the functionality to start working.
 
 ![screenshot1](./src/assets/screenshot01.png)
 
-> We created the project boilerplate using the react-create-app CLI.
+![screenshot2](./src/assets/screenshot02.png)
+
+> We were able to make everything communicate between parent containers and child components through Redux.
 
 ## Live Version
 

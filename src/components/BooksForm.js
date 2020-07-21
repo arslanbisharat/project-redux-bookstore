@@ -14,7 +14,7 @@ function BooksForm() {
     <div className="booksform">
       <input type="text" placeholder="Book Title" />
       <select name="categories">
-        {categories.forEach((category) => {
+        {categories.map((category) => {
           return <option value={category}>{category}</option>;
         })}
       </select>

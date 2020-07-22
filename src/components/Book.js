@@ -12,7 +12,10 @@ const Book = ({ book, clickHandler }) => {
       <td>{book.category}</td>
       <td>
         {' '}
-        <button onClick={remove}>Remove Book</button>{' '}
+        <button onClick={remove} type="button">
+          Remove Book
+        </button>
+        {' '}
       </td>
     </tr>
   );
@@ -24,6 +27,7 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default Book;

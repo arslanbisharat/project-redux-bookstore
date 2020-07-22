@@ -1,4 +1,4 @@
-const book = (state, action) => {
+const bookreducer = (state, action) => {
   switch (action.type) {
     case 'CREATE_BOOk':
       return { id: action.id, title: action.title, category: action.category };
@@ -11,4 +11,4 @@ const book = (state, action) => {
   }
 };
 
-export default book;
+export default bookreducer;

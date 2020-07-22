@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import book from './reducers/books';
+import bookreducer from './reducers/books';
 
 book(
   { id: null, title: null, category: null },
@@ -16,18 +16,17 @@ book(
   }
 );
 
-// const store = createStore([
-//   { id: Math.floor(Math.random() * 100000), title: 'HP 2', category: 'Action' },
-//   {
-//     id: Math.floor(Math.random() * 100000),
-//     title: 'HP 3',
-//     category: 'Learning"',
-//   },
-//   { id: Math.floor(Math.random() * 100000), title: 'HP 4', category: 'Horror' },
-//   { id: Math.floor(Math.random() * 100000), title: 'HP 5', category: 'Sci-Fi' },
-// ]);
-
-const store = createStore(book);
+const books = [
+  { id: Math.floor(Math.random() * 100000), title: 'HP 2', category: 'Action' },
+  {
+    id: Math.floor(Math.random() * 100000),
+    title: 'HP 3',
+    category: 'Learning"',
+  },
+  { id: Math.floor(Math.random() * 100000), title: 'HP 4', category: 'Horror' },
+  { id: Math.floor(Math.random() * 100000), title: 'HP 5', category: 'Sci-Fi' }
+]
+const store = createStore(bookreducer, books);
 
 ReactDOM.render(
   <Provider store={store}>

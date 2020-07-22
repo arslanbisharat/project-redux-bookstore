@@ -14,7 +14,8 @@ const Book = ({ book, clickHandler }) => {
         {' '}
         <button onClick={remove} type="button">
           Remove Book
-        </button>{' '}
+        </button>
+        {' '}
       </td>
     </tr>
   );

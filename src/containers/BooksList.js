@@ -5,12 +5,14 @@ import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ books, removeBook, filter, changeFilter }) => {
-  const handleRemoveBook = (book) => {
+const BooksList = ({
+  books, removeBook, filter, changeFilter,
+}) => {
+  const handleRemoveBook = book => {
     removeBook(book);
   };
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = filter => {
     changeFilter(filter);
   };
 
@@ -19,8 +21,7 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
       <CategoryFilter category={filter} clickHandler={handleFilterChange} />
       <table>
         <tbody>
-          {books.map((book) => {
-            console.log(filter);
+          {books.map(book => {
             if (filter === 'All' || !filter) {
               return (
                 <Book
@@ -29,7 +30,8 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
                   clickHandler={handleRemoveBook}
                 />
               );
-            } else if (filter === book.category) {
+            }
+            if (filter === book.category) {
               return (
                 <Book
                   book={book}
@@ -38,6 +40,7 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
                 />
               );
             }
+            return false;
           })}
         </tbody>
       </table>
@@ -45,24 +48,26 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  removeBook: (book) => dispatch(removeBook(book)),
-  changeFilter: (filter) => dispatch(changeFilter(filter)),
+const mapDispatchToProps = dispatch => ({
+  removeBook: book => dispatch(removeBook(book)),
+  changeFilter: filter => dispatch(changeFilter(filter)),
 });
 
 BooksList.defaultProps = {
   books: [],
+  filter: null,
 };
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
   removeBook: PropTypes.func.isRequired,
   changeFilter: PropTypes.func.isRequired,
+  filter: PropTypes.string,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);

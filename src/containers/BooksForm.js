@@ -63,9 +63,10 @@ class BooksForm extends React.Component {
         >
           <option default value>
             {' '}
-            -- select an option --{' '}
+            -- select an option --
+            {' '}
           </option>
-          {categories.map((category) => (
+          {categories.map(category => (
             <option value={category} key={Math.floor(Math.random() * 100000)}>
               {category}
             </option>
@@ -77,7 +78,7 @@ class BooksForm extends React.Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  createBook: (book) => dispatch(createBook(book)),
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(createBook(book)),
 });
 export default connect(null, mapDispatchToProps)(BooksForm);

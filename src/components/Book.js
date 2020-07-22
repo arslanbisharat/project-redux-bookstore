@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({ book, clickHandler }) => {
-  const remove = book => {
-    clickHandler(book)
-  }
+  const remove = () => {
+    clickHandler(book);
+  };
   return (
     <tr>
       <td>{book.id}</td>
@@ -12,7 +12,7 @@ const Book = ({ book, clickHandler }) => {
       <td>{book.category}</td>
       <td>
         {' '}
-       <button onClick={remove}>Remove Book</button>{' '}
+        <button onClick={remove}>Remove Book</button>{' '}
       </td>
     </tr>
   );

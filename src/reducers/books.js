@@ -4,14 +4,8 @@ const bookReducer = (state, action) => {
       return { books: [...state.books, action.payload] };
 
     case 'REMOVE_BOOK':
-      console.log(action.payload.target);
       return {
-        books: state.books.map((book) => {
-          if (book.id !== action.payload.id) {
-            return book;
-          }
-          return null;
-        }),
+        books: state.books.filter((book) => book.id !== action.payload.id),
       };
 
     default:

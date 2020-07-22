@@ -7,7 +7,7 @@ const BooksList = ({ books }) => (
   <div className="bookslist">
     <table>
       <tbody>
-        {books.map((book) => (
+        {books.map(book => (
           <Book book={book} key={book.id} />
         ))}
       </tbody>
@@ -15,7 +15,7 @@ const BooksList = ({ books }) => (
   </div>
 );
 
-const mapStateToProps = (state) => ({ books: state.books });
+const mapStateToProps = state => ({ books: state.books });
 
 BooksList.defaultProps = {
   books: [],

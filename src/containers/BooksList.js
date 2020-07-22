@@ -19,16 +19,36 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
       <CategoryFilter category={filter} clickHandler={handleFilterChange} />
       <table>
         <tbody>
-          {books.map((book) => (
-            <Book book={book} key={book.id} clickHandler={handleRemoveBook} />
-          ))}
+          {books.map((book) => {
+            console.log(filter);
+            if (filter === 'All' || !filter) {
+              return (
+                <Book
+                  book={book}
+                  key={book.id}
+                  clickHandler={handleRemoveBook}
+                />
+              );
+            } else if (filter === book.category) {
+              return (
+                <Book
+                  book={book}
+                  key={book.id}
+                  clickHandler={handleRemoveBook}
+                />
+              );
+            }
+          })}
         </tbody>
       </table>
     </div>
   );
 };
 
-const mapStateToProps = (state) => (console.log(state), { books: state.books });
+const mapStateToProps = (state) => ({
+  books: state.books,
+  filter: state.filter,
+});
 
 const mapDispatchToProps = (dispatch) => ({
   removeBook: (book) => dispatch(removeBook(book)),

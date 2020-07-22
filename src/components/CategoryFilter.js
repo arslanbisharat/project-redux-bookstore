@@ -15,12 +15,20 @@ const CategoryFilter = ({ clickHandler }) => {
 
   const filterByCategory = (e) => {
     const { value } = e.target;
-    clickHandler(value);
+    if (value === 'All') {
+      clickHandler(null);
+    } else {
+      clickHandler(value);
+    }
   };
 
   return (
     <div>
       <select name="categories" onChange={filterByCategory}>
+        <option default value>
+          {' '}
+          -- Filter by Category --{' '}
+        </option>
         {categories.map((category) => (
           <option value={category} key={Math.floor(Math.random() * 100000)}>
             {category}

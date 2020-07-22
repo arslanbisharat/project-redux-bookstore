@@ -1,9 +1,10 @@
-# Redux Library Milestone 2
+# Redux Library Milestone 3
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+
 
 > In this milestone, we created the filter functionality for the bookstore. Now users can search for their favorite category with a select box.
 
@@ -16,6 +17,7 @@
 ![screenshot2](./src/assets/screenshot04.png)
 
 > We were able to create books, remove books and filter books through Redux.
+
 
 ## Live Version
 

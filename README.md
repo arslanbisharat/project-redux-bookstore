@@ -11,6 +11,10 @@
 
 ![screenshot2](./src/assets/screenshot02.png)
 
+![screenshot2](./src/assets/screenshot03.png)
+
+![screenshot2](./src/assets/screenshot04.png)
+
 > We were able to create books, remove books and filter books through Redux.
 
 ## Live Version

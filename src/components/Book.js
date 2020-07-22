@@ -1,7 +1,6 @@
 import React from 'react';
 
-function Book(book) {
-  const { book } = book;
+function Book({book}) {
   return <div className="book">{book}</div>;
 }
 

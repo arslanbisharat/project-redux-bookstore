@@ -5,13 +5,15 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-> In this milestone, we'll connect the CREATE_BOOK and REMOVE_BOOK actions with the React component and make our page dynamic.
+> In this milestone, we created the filter functionality for the bookstore. Now users can search for their favorite category with a select box.
 
 ![screenshot1](./src/assets/screenshot01.png)
 
 ![screenshot2](./src/assets/screenshot02.png)
 
-> We were able to create books and reomve books through Redux.
+![screenshot3](./src/assets/screenshot03.png)
+
+> We were able to create books, remove books and filter books through Redux.
 
 ## Live Version
 
@@ -113,7 +115,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Github: [@githubhandle](https://github.com/arslanbisharat)
 - Twitter: [@twitterhandle](https://twitter.com/arslan_bisharat)
 - LinkedIn: [linkedIn](https://www.linkedin.com/in/muhammad-arslan)
-
 
 ## 🤝 Contributing
 

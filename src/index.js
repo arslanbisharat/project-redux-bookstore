@@ -4,7 +4,7 @@ import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './App';
-import bookReducer from './reducers/books';
+import bookStoreReducers from './reducers';
 
 const booksList = [
   {
@@ -20,16 +20,15 @@ const booksList = [
   },
   { id: Math.floor(Math.random() * 100000), title: 'HP 4', category: 'Horror' },
   { id: Math.floor(Math.random() * 100000), title: 'HP 5', category: 'Sci-Fi' },
-
 ];
 
-const defaultState = { books: booksList, filter: 'All' };
+const defaultState = { books: booksList };
 
-const store = createStore(bookReducer, defaultState);
+const store = createStore(bookStoreReducers, defaultState);
 
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root'),
+  document.getElementById('root')
 );

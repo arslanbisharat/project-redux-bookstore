@@ -62,10 +62,9 @@ class BooksForm extends React.Component {
         <select name="categories" onChange={this.handleChange} value={category}>
           <option default value>
             {' '}
-            -- select an option --
-            {' '}
+            -- select an option --{' '}
           </option>
-          {categories.map(category => (
+          {categories.map((category) => (
             <option value={category} key={Math.floor(Math.random() * 100000)}>
               {category}
             </option>
@@ -81,7 +80,7 @@ BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => ({
-  createBook: book => dispatch(createBook(book)),
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => dispatch(createBook(book)),
 });
 export default connect(null, mapDispatchToProps)(BooksForm);

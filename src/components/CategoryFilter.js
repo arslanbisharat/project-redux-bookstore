@@ -1,34 +1,34 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 
-  const CategoryFilter = () => {
-    const categories = [
-        'Action',
-        'Biography',
-        'History',
-        'Horror',
-        'Kids',
-        'Learning',
-        'Sci-Fi',
-      ];
+const CategoryFilter = ({ clickHandler }) => {
+  const categories = [
+    'All',
+    'Action',
+    'Biography',
+    'History',
+    'Horror',
+    'Kids',
+    'Learning',
+    'Sci-Fi',
+  ];
 
-      return (
-          <div>
-            <select name="categories">
-            <option default value>
-            {' '}
-            -- Filter --
-            {' '}
+  const filterByCategory = (e) => {
+    const { value } = e.target;
+    clickHandler(value);
+  };
+
+  return (
+    <div>
+      <select name="categories" onChange={filterByCategory}>
+        {categories.map((category) => (
+          <option value={category} key={Math.floor(Math.random() * 100000)}>
+            {category}
           </option>
-          {categories.map(category => (
-            <option value={category} key={Math.floor(Math.random() * 100000)}>
-              {category}
-            </option>
-          ))}
-          </select>
-
-          </div>
-      )
-  }
+        ))}
+      </select>
+    </div>
+  );
+};
 
 export default CategoryFilter;

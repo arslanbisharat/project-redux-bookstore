@@ -61,6 +61,10 @@ class BooksForm extends React.Component {
           onChange={this.handleChange}
           value={this.state.category}
         >
+          <option default value>
+            {' '}
+            -- select an option --{' '}
+          </option>
           {categories.map((category) => (
             <option value={category} key={Math.floor(Math.random() * 100000)}>
               {category}

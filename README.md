@@ -1,15 +1,17 @@
-# Redux Library Milestone 2
+# Redux Library Milestone 3
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-> In this milestone, we'll connect the CREATE_BOOK and REMOVE_BOOK actions with the React component and make our page dynamic.
+> On this milestone, we implemented the reducers to add and remove books.
 
 ![screenshot1](./src/assets/screenshot01.png)
 
 ![screenshot2](./src/assets/screenshot02.png)
+
+![screenshot3](./src/assets/screenshot03.png)
 
 > We were able to make everything communicate between parent containers and child components through Redux.
 
@@ -113,7 +115,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Github: [@githubhandle](https://github.com/arslanbisharat)
 - Twitter: [@twitterhandle](https://twitter.com/arslan_bisharat)
 - LinkedIn: [linkedIn](https://www.linkedin.com/in/muhammad-arslan)
-
 
 ## 🤝 Contributing
 

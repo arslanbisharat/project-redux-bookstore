@@ -5,7 +5,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-> For this milestone, we built the necessary files to create the app. We divided them into the appropriate folders and managed to create the state for the components. We worked with the connect method from Redux as well as the createStore to set an initial state for the app and set everything else in place for the functionality to start working.
+> In this milestone, we'll connect the CREATE_BOOK and REMOVE_BOOK actions with the React component and make our page dynamic.
 
 ![screenshot1](./src/assets/screenshot01.png)
 
@@ -114,13 +114,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Twitter: [@twitterhandle](https://twitter.com/arslan_bisharat)
 - LinkedIn: [linkedIn](https://www.linkedin.com/in/muhammad-arslan)
 
-## Future Upgrades
-
-- Add more options for calculation like square root, power and more.
 
 ## 🤝 Contributing
 
-Feel free to check the [issues page](https://github.com/lmaldonadoch/react-calculator/issues).
+Feel free to check the [issues page](https://github.com/arslanbisharat/project-redux-bookstore/issues).
 
 ## Show your support
 

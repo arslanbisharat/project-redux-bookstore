@@ -13,7 +13,7 @@ const CategoryFilter = ({ clickHandler }) => {
     'Sci-Fi',
   ];
 
-  const filterByCategory = e => {
+  const filterByCategory = (e) => {
     const { value } = e.target;
     if (value === 'All') {
       clickHandler(null);
@@ -24,13 +24,12 @@ const CategoryFilter = ({ clickHandler }) => {
 
   return (
     <div>
-      <select name="categories" onChange={filterByCategory}>
+      <select name="categories" onChange={filterByCategory} className="filter">
         <option default value>
           {' '}
-          -- Filter by Category --
-          {' '}
+          CATEGORIES{' '}
         </option>
-        {categories.map(category => (
+        {categories.map((category) => (
           <option value={category} key={Math.floor(Math.random() * 100000)}>
             {category}
           </option>

@@ -1,14 +1,9 @@
-
-# Redux Library Milestone 5
-
-
+##project-redux-bookstore
+ 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-
-
-> On this milestone, we styled the whole website. We implemented all the CSS styling and detailed the app.
 
 
 ![screenshot1](./src/assets/screenshot01.png)

@@ -4,12 +4,15 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions';
 import CategoryFilter from '../components/CategoryFilter';
-const BooksList = ({ books, removeBook, filter, changeFilter }) => {
-  const handleRemoveBook = (book) => {
+
+const BooksList = ({
+  books, removeBook, filter, changeFilter,
+}) => {
+  const handleRemoveBook = book => {
     removeBook(book);
   };
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = filter => {
     changeFilter(filter);
   };
 
@@ -28,12 +31,12 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
         </div>
 
         <div className="profile-container">
-          <i className="fas fa-user-alt"></i>
+          <i className="fas fa-user-alt" />
         </div>
       </div>
       <table>
         <tbody>
-          {books.map((book) => {
+          {books.map(book => {
             if (filter === 'All' || !filter) {
               return (
                 <Book
@@ -60,14 +63,14 @@ const BooksList = ({ books, removeBook, filter, changeFilter }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   books: state.books,
   filter: state.filter,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  removeBook: (book) => dispatch(removeBook(book)),
-  changeFilter: (filter) => dispatch(changeFilter(filter)),
+const mapDispatchToProps = dispatch => ({
+  removeBook: book => dispatch(removeBook(book)),
+  changeFilter: filter => dispatch(changeFilter(filter)),
 });
 
 BooksList.defaultProps = {

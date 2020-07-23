@@ -10,6 +10,7 @@ const bookReducer = (state, action) => {
           if (book.id !== action.payload.id) {
             return book;
           }
+          return null;
         }),
       };
 

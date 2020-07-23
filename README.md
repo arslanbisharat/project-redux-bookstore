@@ -11,7 +11,7 @@
 
 ![screenshot2](./src/assets/screenshot02.png)
 
-> We were able to make everything communicate between parent containers and child components through Redux.
+> We were able to create books and reomve books through Redux.
 
 ## Live Version
 

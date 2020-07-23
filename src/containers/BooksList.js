@@ -5,7 +5,7 @@ import Book from '../components/Book';
 import { removeBook } from '../actions';
 
 const BooksList = ({ books, removeBook }) => {
-  const handleRemoveBook = (book) => {
+  const handleRemoveBook = book => {
     removeBook(book);
   };
 
@@ -13,7 +13,7 @@ const BooksList = ({ books, removeBook }) => {
     <div className="books-list">
       <table>
         <tbody>
-          {books.map((book) => (
+          {books.map(book => (
             <Book book={book} key={book.id} clickHandler={handleRemoveBook} />
           ))}
         </tbody>
@@ -22,10 +22,10 @@ const BooksList = ({ books, removeBook }) => {
   );
 };
 
-const mapStateToProps = (state) => ({ books: state.books });
+const mapStateToProps = state => ({ books: state.books });
 
-const mapDispatchToProps = (dispatch) => ({
-  removeBook: (book) => dispatch(removeBook(book)),
+const mapDispatchToProps = dispatch => ({
+  removeBook: book => dispatch(removeBook(book)),
 });
 
 BooksList.defaultProps = {

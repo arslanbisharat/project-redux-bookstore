@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createBook } from '../actions';
 
 class BooksForm extends React.Component {
@@ -27,7 +28,8 @@ class BooksForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const { title, category } = this.state;
-    this.props.createBook({
+    const { createBook } = this.props;
+    createBook({
       id: Math.floor(Math.random() * 100000),
       title,
       category,
@@ -39,6 +41,7 @@ class BooksForm extends React.Component {
   }
 
   render() {
+    const { category } = this.state;
     const categories = [
       'Action',
       'Biography',
@@ -56,11 +59,7 @@ class BooksForm extends React.Component {
           name="title"
           onChange={this.handleChange}
         />
-        <select
-          name="categories"
-          onChange={this.handleChange}
-          value={this.state.category}
-        >
+        <select name="categories" onChange={this.handleChange} value={category}>
           <option default value>
             {' '}
             -- select an option --
@@ -77,6 +76,10 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = dispatch => ({
   createBook: book => dispatch(createBook(book)),

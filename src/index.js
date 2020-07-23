@@ -20,9 +20,10 @@ const booksList = [
   },
   { id: Math.floor(Math.random() * 100000), title: 'HP 4', category: 'Horror' },
   { id: Math.floor(Math.random() * 100000), title: 'HP 5', category: 'Sci-Fi' },
+
 ];
 
-const defaultState = { books: booksList };
+const defaultState = { books: booksList, filter: 'All' };
 
 const store = createStore(bookReducer, defaultState);
 

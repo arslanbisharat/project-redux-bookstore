@@ -24,10 +24,10 @@ const CategoryFilter = ({ clickHandler }) => {
 
   return (
     <div>
-      <select name="categories" onChange={filterByCategory}>
+      <select name="categories" onChange={filterByCategory} className="filter">
         <option default value>
           {' '}
-          -- Filter by Category --
+          CATEGORIES
           {' '}
         </option>
         {categories.map(category => (

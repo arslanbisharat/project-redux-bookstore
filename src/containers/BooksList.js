@@ -18,7 +18,22 @@ const BooksList = ({
 
   return (
     <div className="books-list">
-      <CategoryFilter category={filter} clickHandler={handleFilterChange} />
+      <div className="navbar">
+        <div className="left-items-container">
+          <div className="logo">Bookstore CMS</div>
+          <div className="option">BOOKS</div>
+          <div className="option">
+            <CategoryFilter
+              category={filter}
+              clickHandler={handleFilterChange}
+            />
+          </div>
+        </div>
+
+        <div className="profile-container">
+          <i className="fas fa-user-alt" />
+        </div>
+      </div>
       <table>
         <tbody>
           {books.map(book => {

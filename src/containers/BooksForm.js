@@ -52,27 +52,35 @@ class BooksForm extends React.Component {
       'Sci-Fi',
     ];
     return (
-      <form className="books-form" onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          placeholder="Book Title"
-          name="title"
-          onChange={this.handleChange}
-        />
-        <select name="categories" onChange={this.handleChange} value={category}>
-          <option default value>
-            {' '}
-            -- select an option --
-            {' '}
-          </option>
-          {categories.map(category => (
-            <option value={category} key={Math.floor(Math.random() * 100000)}>
-              {category}
+      <div className="form-container">
+        <h3>ADD NEW BOOK</h3>
+        <form className="books-form" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            placeholder="Book Title"
+            className="title-input"
+            name="title"
+            onChange={this.handleChange}
+          />
+          <select
+            name="categories"
+            onChange={this.handleChange}
+            value={category}
+          >
+            <option default value>
+              {' '}
+              Category
+              {' '}
             </option>
-          ))}
-        </select>
-        <input type="submit" value="Add book" />
-      </form>
+            {categories.map(category => (
+              <option value={category} key={Math.floor(Math.random() * 100000)}>
+                {category}
+              </option>
+            ))}
+          </select>
+          <input type="submit" value="ADD BOOK" />
+        </form>
+      </div>
     );
   }
 }

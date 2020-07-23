@@ -8,8 +8,13 @@ const BooksList = ({ books }) => (
     <table>
       <tbody>
         {books.map(book => (
+        <div>
           <Book book={book} key={book.id} />
-        ))}
+          <button id= "removeButton">Remove</button>
+        </div>
+          
+))}
+
       </tbody>
     </table>
   </div>
@@ -23,6 +28,7 @@ BooksList.defaultProps = {
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
+  removeBook: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps)(BooksList);

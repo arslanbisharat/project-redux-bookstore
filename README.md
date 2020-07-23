@@ -1,11 +1,15 @@
+
 # Redux Library Milestone 5
+
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
+
 > On this milestone, we styled the whole website. We implemented all the CSS styling and detailed the app.
+
 
 ![screenshot1](./src/assets/screenshot01.png)
 
@@ -18,6 +22,7 @@
 ![screenshot2](./src/assets/screenshot05.png)
 
 > We were able to create books, remove books and filter books through Redux.
+
 
 ## Live Version
 
